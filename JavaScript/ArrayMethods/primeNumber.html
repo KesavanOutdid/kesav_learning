@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <h3>Prime Numbers with map() method</h3>
+            <p>map() can be used to check if each element of an array is a prime number.</p>
+            <p>In this example, we return 'Prime' if a number is prime, otherwise 'Not Prime'.</p>
+        </div>
+        <script>
+            // Array of numbers
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            // Function to check if a number is prime
+            function isPrime(num) {
+                if (num <= 1) return false;
+                for (let i = 2; i < num; i++) {
+                    if (num % i === 0) return false;
+                }
+                return true;
+            }
+
+            // Use map() to create a new array with 'Prime' or 'Not Prime' for each number
+            const primeStatus = numbers.map(function(num) {
+                return isPrime(num) ? `${num} is Prime` : `${num} is Not Prime`;
+            });
+
+            // Display the original array and the prime status array in the console
+            console.log('Original numbers array:', numbers);
+            console.log('Prime status array:', primeStatus);
+        </script>
+    </body>
+</html>

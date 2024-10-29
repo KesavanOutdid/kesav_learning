@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <h3>Map() method</h3>
+            <p>map() creates a new array from calling a function for every array element.</p>
+            <p>map() does not execute the function for empty elements.</p> 
+            <p>map() does not change the original array.</p>
+        </div>
+        <script>
+            // Original array of user objects
+            const users = [
+                { id: 1, name: 'Alice', username: 'alice123' },
+                { id: 2, name: 'Bob', username: 'bob456' },
+                { id: 3, name: 'Charlie', username: 'charlie789' }
+            ];
+
+            // Use map() to create a new array containing only the usernames
+            const usernames = users.map(function(user) {
+                return user.username;
+            });
+
+            // Display the original array and new array in the console
+            console.log('Original user array:', users);
+            console.log('Usernames array:', usernames);
+
+            // Use map() with an arrow function to create a new array containing only the usernames
+            const usernames2 = users.map(user => user.name);
+            console.log('Usernames array use arrow function:', usernames2);
+
+        </script>
+    </body>
+</html>

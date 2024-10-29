@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <p>A JavaScript arrow function is a shorter syntax for writing functions.</p><br/>
+            <pre>Syntax:
+                const <function name> = () => {};
+                const hi = () => {
+                 console.log("Hey hi");
+                };   
+                hi(); // O/p: Hey hi
+            </pre>
+        </div>
+        <script>
+            // Syntax:
+            //     const <function name> = () => {}
+     
+            //     const hi = () => {
+            //         console.log("Hey there");
+            //     };   
+            //     hi(); // O/p: Hey there
+
+            const a = 10;
+            const b = 20;
+
+            // Arrow function to add two variables
+            const add = () => {
+                console.log(a + b);
+            };
+            add(); // O/p: 30
+
+            // Arrow function with parameters
+            const addParams = (a, b) => {
+                console.log(a + b);
+            };
+            addParams(); // O/p: NaN
+            addParams(10, 20); // O/p: 30 // parameters passed to the function
+        </script>
+    </body>
+</html>

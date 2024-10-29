@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <bopduy>
+        <p>Strings are for storing text, Strings are written with quotes</p>
+        <p>Strings are written inside quotes. You can use single or double quotes:</p>
+
+        <p id="demo"></p>
+
+        <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+
+        <p id="demo2"></p>
+
+
+        <p>With back-ticks, you can use both single and double quotes inside a string:</p>
+
+        <p id="demo3"></p>
+
+        <p>Templates not supported in Internet Explorer.</p>
+
+        <p>The escape sequence \" inserts a double quote in a string.</p>
+
+        <p id="demo4"></p>
+
+        <p>The escape sequence \' inserts a single quote in a string.</p>
+
+        <p id="demo5"></p>
+
+        <p>The escape sequence \\ inserts a backslash in a string.</p>
+
+        <p id="demo6"></p>
+        <script>
+            let carName1 = "Volvo XC60"; // Double quotes
+            let carName2 = 'Volvo XC60'; // Single quotes
+            
+            document.getElementById("demo").innerHTML =
+            carName1 + " " + carName2; 
+
+
+            // quotes inside a string
+            let answer1 = "It's alright";
+            let answer2 = "He is called 'Johnny'";
+            let answer3 = 'He is called "Johnny"'; 
+
+            document.getElementById("demo2").innerHTML =
+            answer1 + "<br>" + answer2 + "<br>" + answer3;
+            
+            // Template literals (back-ticks) inside a string
+            let text = `He's often called "Johnny"`;
+            document.getElementById("demo3").innerHTML = text;
+
+            //escape sequence
+            let texts = "We are the so-called \"Vikings\" from the north.";
+            document.getElementById("demo4").innerHTML = texts; 
+
+            let texts2 = 'It\'s alright.';
+            document.getElementById("demo5").innerHTML = texts2;
+
+            let texts3 = "The character \\ is called backslash.";
+            document.getElementById("demo6").innerHTML = texts3; 
+        </script>
+    </bopduy>
+</html>

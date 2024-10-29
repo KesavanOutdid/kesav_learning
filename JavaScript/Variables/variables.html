@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>Variables are containers for storing Information or Data</div>
+        <p> 1. Using var </p>
+        <p> 2. Using let</p>
+        <p> 3. Using const</p>
+        <p>The var keyword was used in all JavaScript code from 1995 to 2015.</p>
+        <p>The let and const keywords were added to JavaScript in 2015.</p>
+        <p>The var keyword should only be used in code written for older browsers.</p>
+        <script>
+            var a = 10;
+            var b = 20;
+            console.log(a + b);
+            // In the above program a and b are variables, 10 and 20 are Integer Data. 
+
+            var a = 50;
+            console.log(a);
+            // O/p: 50
+
+            let a = 50;
+            console.log(a);
+            // O/p: 50
+
+            const a = 50;
+            console.log(a);
+            // O/p: 50
+
+            // Using let is a Block Scope 
+            {
+                let a = 10;
+            }
+            console.log(a);
+            // O/p: ReferenceError: a is not defined
+
+            {
+                let a = 10;
+                console.log(a);
+            }
+            // O/p:10;
+
+            // Using var is a Global Scope
+            {
+                var a =20;
+                console.log(a);
+            }
+            var b =30;
+            var c = a+b;
+            console.log(c);
+            // o/p: 20, 50
+
+            // Using const, Always declare a variable with const when you know that the value should not be changed.    
+
+            const a = 10;
+            a = 20;
+            console.log(a);
+            // O/p: TypeError: Assignment to constant variable.
+
+            // ex:
+            var Price = 100;
+            var Product = 'Book';
+            var Tax = 10;
+            console.log(Product);
+            var total = Price + Tax;
+            console.log(total); // O/p: Book, 110
+
+        </script>
+    </body>
+</html>

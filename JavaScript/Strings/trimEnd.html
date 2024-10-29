@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>The `trimEnd()` method removes whitespace from the end of a string:</p>
+        <p id="demo"></p>
+
+        <p id="demo2"></p>
+
+        <script>
+            let text = "Hello World!   ";
+            document.getElementById("demo").innerHTML = text.trimEnd(); // "Hello World!"
+            let text2 = text.trimStart();
+            document.getElementById("demo2").innerHTML ="Length text1 = " + text.length + "<br>Length text2 = " + text2.length;
+        </script>
+    </body>
+</html>

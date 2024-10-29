@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div> Adds and remove array elements</div>
+        <p>The splice() method of Array instances changes the contents of an array by removing or 
+            replacing existing elements and/or adding new elements in place.
+        </p>
+
+        <p id="demo"></p>
+        <script>
+            const fruits = ["Banana", "Orange", "Apple", "1", "2", "3", "4"];
+            fruits.splice(2,3, 'Mango');
+            console.log(fruits);
+            document.getElementById("demo").innerHTML = fruits;
+            // O/p: Banana,Mango,Orange,Apple
+
+            // Syntax
+            // splice(start)
+            // splice(start, deleteCount)
+            // splice(start, deleteCount, item1)
+        </script>
+    </body>
+</html>

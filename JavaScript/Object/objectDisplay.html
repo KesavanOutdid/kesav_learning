@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <p>Displaying a JavaScript object will output [object Object]:</p><br/>
+            <p id="demos"></p>
+        </div>
+        <script>
+            const person = {
+                name: "John",
+                age: 30,
+                city: "New York"
+            };
+            document.getElementById("demos").innerHTML = person;
+            // O/p: [object Object]
+            console.log(person); // O/p: {name: "John", age: 30, city: "New York"}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Date Methods</h1>
+        <p>In JavaScript, date objects are created with new Date().</p>
+        <p>new Date() returns a date object with the current date and time.</p>
+        <h2>Using new Date()</h2>
+
+        <p id="fullYear">Year: </p>
+        <p id="month">Month: </p>
+        <p id="date">Date: </p>
+        <p id="day">Day of the Week: </p>
+        <p id="hours">Hours: </p>
+        <p id="minutes">Minutes: </p>
+        <p id="seconds">Seconds: </p>
+        <p id="milliseconds">Milliseconds: </p>
+        <p id="time">Time (milliseconds since January 1, 1970): </p>
+
+        <script>
+            const d = new Date();
+            document.getElementById("fullYear").innerHTML = "Year: " + d.getFullYear();
+            document.getElementById("month").innerHTML = "Month: " + (d.getMonth() + 1); // Months are 0-based
+            document.getElementById("date").innerHTML = "Date: " + d.getDate();
+            document.getElementById("day").innerHTML = "Day of the Week: " + d.getDay(); // 0 = Sunday, 6 = Saturday
+            document.getElementById("hours").innerHTML = "Hours: " + d.getHours();
+            document.getElementById("minutes").innerHTML = "Minutes: " + d.getMinutes();
+            document.getElementById("seconds").innerHTML = "Seconds: " + d.getSeconds();
+            document.getElementById("milliseconds").innerHTML = "Milliseconds: " + d.getMilliseconds();
+            document.getElementById("time").innerHTML = "Time (milliseconds since January 1, 1970): " + d.getTime();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h1>JavaScript Switch Statement</h1>
+        <p>Use the <strong>switch</strong> statement to select one of many code blocks to be executed.</p>
+
+        <h2>Syntax</h2>
+        <pre>
+            switch(expression) {
+            case x:
+                // code block
+                break;
+            case y:
+                // code block
+                break;
+            default:
+                // code block
+            }
+        </pre>
+
+        <p>This is how it works:</p>
+        <ul>
+            <li>The switch expression is evaluated once.</li>
+            <li>The value of the expression is compared with the values of each case.</li>
+            <li>If there is a match, the associated block of code is executed.</li>
+            <li>If there is no match, the default code block is executed.</li>
+        </ul>
+
+        <h2>Example</h2>
+        <p>The <code>getDay()</code> method returns the weekday as a number between 0 and 6 (Sunday=0, Monday=1, Tuesday=2, ...).</p>
+        <p>This example uses the weekday number to calculate the weekday name:</p>
+        
+        <p>Today is: <span id="dayName"></span></p>
+
+        <script>
+            // Get the current day as a number (0-6)
+            let dayNumber = new Date().getDay();
+            let day;
+
+            // Use the switch statement to determine the name of the day
+            switch (dayNumber) {
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+                    break;
+                default:
+                    day = "Unknown";
+            }
+
+            // Display the name of the day in the HTML
+            document.getElementById("dayName").innerHTML = day;
+        </script>
+
+    </body>
+</html>

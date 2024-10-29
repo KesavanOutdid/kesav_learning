@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h1>JavaScript if, else, and else if</h1>
+        <p>Very often when you write code, you want to perform different actions based on different conditions. You can use conditional statements in your code to do this. In JavaScript, we have the following conditional statements:</p>
+        
+        <ul>
+            <li><strong>if:</strong> Specifies a block of code to be executed if a specified condition is true.</li>
+            <li><strong>else:</strong> Specifies a block of code to be executed if the same condition is false.</li>
+            <li><strong>else if:</strong> Specifies a new condition to test if the first condition is false.</li>
+            <li><strong>switch:</strong> Specifies many alternative blocks of code to be executed.</li>
+        </ul>
+        
+        <h2>Example of if Statement</h2>
+        <p>If the hour is less than 18:00, display "Good day":</p>
+        <script>
+            // Syntax
+            // if (condition) {
+            //    block of code to be executed if the condition is true
+            // }
+
+            let hour = new Date().getHours();
+            let greeting;
+            
+            if (hour < 18) {
+                greeting = "Good day";
+            }
+            
+            document.write("<p>Greeting based on hour (" + hour + "): " + greeting + "</p>");
+        </script>
+
+        <h2>Example of if-else Statement</h2>
+        <p>If the hour is less than 18:00, display "Good day". Otherwise, display "Good evening":</p>
+        <script>
+            // if (condition) {
+            //  block of code to be executed if the condition is true
+            // } else {
+            //  block of code to be executed if the condition is false
+            // }
+            if (hour < 18) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            
+            document.write("<p>Greeting based on hour (" + hour + "): " + greeting + "</p>");
+        </script>
+
+        <h2>Example of if-else if Statement</h2>
+        <p>If the time is less than 10:00, display "Good morning". If not, but time is less than 20:00, display "Good day". Otherwise, display "Good evening":</p>
+        <script>
+            /*  if (condition1) {
+            //  block of code to be executed if condition1 is true
+            } else if (condition2) {
+            //  block of code to be executed if the condition1 is false and condition2 is true
+            } else {
+            //  block of code to be executed if the condition1 is false and condition2 is false
+            } */
+            if (hour < 10) {
+                greeting = "Good morning";
+            } else if (hour < 20) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            
+            document.write("<p>Greeting based on hour (" + hour + "): " + greeting + "</p>");
+        </script>
+
+    </body>
+</html>

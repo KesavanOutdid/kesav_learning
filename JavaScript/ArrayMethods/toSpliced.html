@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>ES2023 added the Array toSpliced() method as a safe way to splice an array without altering the original array.</h1>
+        <p>The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, 
+            keeping the original array unchanged, while the old method altered the original array.</p>
+        <h2>The toSpliced() Method</h2>
+
+        <p id="demo"></p>
+
+        <script>
+            const months = ["Jan", "Feb", "Mar", "Apr"];
+            const spliced = months.toSpliced(1, 2);
+            document.getElementById("demo").innerHTML = spliced;
+        </script>
+
+    </body>
+</html>

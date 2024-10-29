@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <h2>The concat() Method</h2>
+
+    <p>The concat() method merges (concatenates) arrays:</p>
+    <p>The concat() method of Array instances is used to merge two or more arrays. 
+        This method does not change the existing arrays, but instead returns a new array.
+    </p>
+
+    <p id="demo"></p>
+    <script>
+        const myGirls = [1, 2];
+        const myBoys = [3, 4, 5];
+        const myChildren = myGirls.concat(myBoys);
+
+        document.getElementById("demo").innerHTML = myChildren;
+
+        // Syntax //
+        // concat()
+        // concat(value1)
+        // concat(value1, value2)
+        // concat(value1, value2, /* …, */ valueN)
+    </script>
+
+    </body>
+</html>

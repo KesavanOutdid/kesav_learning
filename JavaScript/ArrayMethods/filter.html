@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+        </style>    
+    </header>
+    <body>
+        <div>
+            <h3>Filter() method</h3>
+            <p>filter() creates a new array with elements that pass a test provided by a function.</p>
+            <p>It allows you to selectively include elements based on specific conditions.</p>
+        </div>
+
+        <div>
+            <h3>Employee Search</h3>
+            <input type="text" id="searchInput" placeholder="Search by Name or Phone" />
+            <button onclick="searchEmployee()">Search</button>
+    
+            <table id="employeeTable">
+                <thead>
+                    <tr>
+                        <th>empID</th>
+                        <th>empName</th>
+                        <th>empDOB</th>
+                        <th>empAddress</th>
+                        <th>empPhone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Employee data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+        <script>
+            const names = ['Kesav', 'Keshav', 'Kesh', 'Kesavan', 'Kesavanth', 'Rahul', 'Ravi', 'Kesar', '2', '34', '56', '42', '28'];
+
+            const filteredNames = names.filter(function(name) {
+                // console.log(name);
+                return name.includes('a');
+            });
+
+            console.log(names.filter(kesavan => kesavan.includes('Kesav')));
+            console.log(filteredNames); 
+
+            // Filter() method with arrow function
+
+            const names1 = ['Kesav', 'Keshav', 'Kesh', 'Kesavan', 'Kesavanth', 'Rahul', 'Ravi', 'Kesar', '2', '34', '56', '42', '28'];
+
+            // Using an arrow function inside filter()
+            const filteredNames1 = names1.filter(name => name.includes('2'));
+
+            console.log(filteredNames1); 
+
+            //Before Arrow:
+            hello = function() {
+                return "Hello World!";
+            }
+            // console.log(hello());
+            
+            //With Arrow Function:
+            hello1 = () => {
+                return "Hello World!";
+            }
+            // console.log(hello1());
+     
+            // employees data
+            const employees = [
+                { empID: 1, empName: 'Kesav', empDOB: '1990-01-01', empAddress: 'Krishnagiri', empPhone: '1234567890' },
+                { empID: 2, empName: 'Keshav', empDOB: '1985-05-05', empAddress: 'Hosur', empPhone: '2345678901' },
+                { empID: 3, empName: 'Rahul', empDOB: '1992-09-09', empAddress: 'Salem', empPhone: '3456789012' },
+                { empID: 4, empName: 'Ravi', empDOB: '1994-02-14', empAddress: 'Blr', empPhone: '4567890123' }
+            ];
+    
+            function tableData(data) {
+                const tableBody = document.getElementById('employeeTable').getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = ''; // Clear existing data
+
+                data.map(emp => { 
+                    const row = tableBody.insertRow();
+                    row.insertCell(0).textContent = emp.empID;
+                    row.insertCell(1).textContent = emp.empName;
+                    row.insertCell(2).textContent = emp.empDOB;
+                    row.insertCell(3).textContent = emp.empAddress;
+                    row.insertCell(4).textContent = emp.empPhone;
+                });
+            }
+
+            function searchEmployee() {
+                const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+                const filteredEmployees = employees.filter(emp => 
+                    emp.empName.toLowerCase().includes(searchTerm) || 
+                    emp.empPhone.includes(searchTerm)
+                );
+                tableData(filteredEmployees);
+            }
+    
+            tableData(employees);
+        </script>
+    </body>
+</html>

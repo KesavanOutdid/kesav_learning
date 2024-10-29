@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <p>A JavaScript function is a block of code designed to perform a particular task.</p><br/>
+            <pre>Syntax:
+                function <function name>(){}
+                function hi(){
+                 console.log("Hey hi");
+                }   
+                hi(); // 0/p : Hey hi
+            </pre>
+        </div>
+        <script>
+            // Syntax:
+            //     function <function name>(){}
+     
+            //     function hi()
+            //     {
+            //      console.log("Hey there");
+            //     }   
+            //     hi(); // 0/p : Hey there
+
+            var a =10;
+            var b =20;
+            function add()
+            {
+                console.log(a+b);
+            }
+            add(); // O/p: 30
+            
+            function add(a,b)
+            {
+                console.log(a+b);
+            }
+            add(); // O/p: NaN
+            add(10,20); // O/p: 30 // parameters passed to the function
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div> Remove (pop) the last element:</div>
+        <p id="demo"></p>
+        <hr/>
+        <div> pop() returns the element it removed:</div>
+        <p id="demo2"></p>
+        <script>
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits.pop();
+            document.getElementById("demo").innerHTML = fruits;
+            // O/p: Banana,Orange,Apple
+
+            const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+            let removed = fruits2.pop();
+            document.getElementById("demo2").innerHTML = removed;
+            // O/p: Mango
+        </script>
+    </body>
+</html>

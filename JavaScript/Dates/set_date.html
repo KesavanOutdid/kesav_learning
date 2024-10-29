@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Date Set Methods</h1>
+        <p>Set Date methods let you set date values (years, months, days, hours, minutes, seconds, milliseconds) for a Date Object.</p>
+        
+        <p>Original Date:</p>
+        <p id="originalDate"></p>
+
+        <p>Modified Date:</p>
+        <p id="modifiedDate"></p>
+
+        <button onclick="setDateValues()">Set Date Values</button>
+
+        <script>
+            function displayDate() {
+                const d = new Date();
+                document.getElementById("originalDate").innerHTML = "Original Date: " + d.toString();
+            }
+
+            function setDateValues() {
+                const d = new Date();
+
+                // Display original date
+                displayDate();
+                
+                // Set new date values
+                d.setFullYear(2025); // Set year to 2025
+                d.setMonth(11); // Set month to December (0-based index)
+                d.setDate(25); // Set day to 25
+                d.setHours(15); // Set hours to 3 PM
+                d.setMinutes(30); // Set minutes to 30
+                d.setSeconds(45); // Set seconds to 45
+                d.setMilliseconds(500); // Set milliseconds to 500
+
+                // Display modified date
+                document.getElementById("modifiedDate").innerHTML = "Modified Date: " + d.toString();
+            }
+
+            // Display the original date when the page loads
+            displayDate();
+        </script>
+
+    </body>
+</html>
